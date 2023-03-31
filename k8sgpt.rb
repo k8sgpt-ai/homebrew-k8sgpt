@@ -5,20 +5,20 @@
 class K8sgpt < Formula
   desc ""
   homepage "https://k8sgpt.ai"
-  version "0.1.5"
+  version "0.1.6"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.1.5/k8sgpt_Darwin_arm64.tar.gz"
-      sha256 "ffa9016db113cea25eadd55d4ddff9ede3413a0348e879444a37d9fd1aa8c06d"
+    if Hardware::CPU.intel?
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.1.6/k8sgpt_Darwin_x86_64.tar.gz"
+      sha256 "bacc80022599baea0f86d084c63b03aa4c00337183421601da2e22db6d3ce334"
 
       def install
         bin.install "k8sgpt"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.1.5/k8sgpt_Darwin_x86_64.tar.gz"
-      sha256 "96a31c7fa378f2f30b4a5e6efe26c5fee1862113f9399988a3b69b15c1a46ce3"
+    if Hardware::CPU.arm?
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.1.6/k8sgpt_Darwin_arm64.tar.gz"
+      sha256 "ed40746fe31ee8be0ee8bd48cdfdf66184d7293849fb881ff76d060b318a1735"
 
       def install
         bin.install "k8sgpt"
@@ -28,16 +28,16 @@ class K8sgpt < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.1.5/k8sgpt_Linux_arm64.tar.gz"
-      sha256 "978d6b19647fa44d58500c8615a1d0b1caaf5d4b15ecc199423edafe07d2c766"
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.1.6/k8sgpt_Linux_arm64.tar.gz"
+      sha256 "4a74a2322ecaadf549f6a2c8a842173f0a914a7b7d25b4d354051db483aa08b5"
 
       def install
         bin.install "k8sgpt"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.1.5/k8sgpt_Linux_x86_64.tar.gz"
-      sha256 "10261d9d92b1ef7a871205870cd2702678cb89cbffc8225a65b992e8818b2771"
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.1.6/k8sgpt_Linux_x86_64.tar.gz"
+      sha256 "d90f45a7d1d524fe26004ff6be6b47791b65874befdf8c64ee1869b35acf0eaf"
 
       def install
         bin.install "k8sgpt"
