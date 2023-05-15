@@ -5,20 +5,20 @@
 class K8sgpt < Formula
   desc ""
   homepage "https://k8sgpt.ai"
-  version "0.3.0"
+  version "0.3.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.3.0/k8sgpt_Darwin_x86_64.tar.gz"
-      sha256 "65052eab76f9782fcc4726cdf39638ec5996127bbbf8f96a0250962253a79170"
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.3.1/k8sgpt_Darwin_x86_64.tar.gz"
+      sha256 "bbca6ac059d19c0574afcf6519631706ec744ed9285740279783b6ad7b466cfc"
 
       def install
         bin.install "k8sgpt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.3.0/k8sgpt_Darwin_arm64.tar.gz"
-      sha256 "9fc9a769e29d0aa2fbe2a8e4cc49bebe429c3c830605072683049fdefb7b7a11"
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.3.1/k8sgpt_Darwin_arm64.tar.gz"
+      sha256 "5f58b0e072316705bf169c766da0d1e37f89c7e1f3b4a0ebcc0226299b5dd577"
 
       def install
         bin.install "k8sgpt"
@@ -28,16 +28,16 @@ class K8sgpt < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.3.0/k8sgpt_Linux_x86_64.tar.gz"
-      sha256 "e37e52fe0adb72c2f7f25baedb8f8da1970d27ae123aeb13edfcde2e34733ab4"
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.3.1/k8sgpt_Linux_x86_64.tar.gz"
+      sha256 "23c5029323f745fad7a170fe83d74b544f1370771779871b7a3f0e3ac0e7fbd7"
 
       def install
         bin.install "k8sgpt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.3.0/k8sgpt_Linux_arm64.tar.gz"
-      sha256 "6ad4ce5709b58e6128f711b3b6d5d0ea473aab2283cfa828a428014604d4d037"
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.3.1/k8sgpt_Linux_arm64.tar.gz"
+      sha256 "e93bfd5402b6c5815de5c1bd21fb839146197e4f8f0d3906f37b20b1260ec2e5"
 
       def install
         bin.install "k8sgpt"
