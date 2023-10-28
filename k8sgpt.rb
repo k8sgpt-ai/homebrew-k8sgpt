@@ -5,20 +5,20 @@
 class K8sgpt < Formula
   desc ""
   homepage "https://k8sgpt.ai"
-  version "0.3.18"
+  version "0.3.19"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.3.18/k8sgpt_Darwin_x86_64.tar.gz"
-      sha256 "76d4a24f694f8c46614e7b5acf2a5d10b2d88b3da84b2b8fa3595fe54a5ac633"
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.3.19/k8sgpt_Darwin_x86_64.tar.gz"
+      sha256 "19c3e20756c900b0a0a7f095c3a33c772a8dac347d9930509f2581a86942d76c"
 
       def install
         bin.install "k8sgpt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.3.18/k8sgpt_Darwin_arm64.tar.gz"
-      sha256 "976e4f0ebc2525bb28c214d3e2166f9600ebe92f58f436e3862b7a009374ad9d"
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.3.19/k8sgpt_Darwin_arm64.tar.gz"
+      sha256 "b33ee96c08cf3eed9da3012399d1b14d84a7d87cc2eac5e1162de6af90f7a4e9"
 
       def install
         bin.install "k8sgpt"
@@ -28,16 +28,16 @@ class K8sgpt < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.3.18/k8sgpt_Linux_arm64.tar.gz"
-      sha256 "e053056d4fc325b910d4bd1a58bfa4d08ef0de18a41757e819cad5e6a47b21bb"
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.3.19/k8sgpt_Linux_arm64.tar.gz"
+      sha256 "802f8bb32228ec43db52c1a3732d9537daa010c745ae60e38fb25236911e0cb8"
 
       def install
         bin.install "k8sgpt"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.3.18/k8sgpt_Linux_x86_64.tar.gz"
-      sha256 "141c5e5bd0e8a1861f5c5780293313282f36cdd3a64e0e99e6deca730804abee"
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.3.19/k8sgpt_Linux_x86_64.tar.gz"
+      sha256 "bc8edff648c5256b69d3decf17c8ead57a64b29ff4c615195a14a5eb7924c6a3"
 
       def install
         bin.install "k8sgpt"
