@@ -5,20 +5,20 @@
 class K8sgpt < Formula
   desc ""
   homepage "https://k8sgpt.ai"
-  version "0.4.15"
+  version "0.4.16"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.15/k8sgpt_Darwin_x86_64.tar.gz"
-      sha256 "6b5b66e51cbfcdd14b77fc571e95c606330f4be281b4f7f83c6d0327e10c3450"
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.16/k8sgpt_Darwin_x86_64.tar.gz"
+      sha256 "e3f448ee71ca7f4ba981e6c164c639a4f59b143eed2edb98f21afc4a6ff046a7"
 
       def install
         bin.install "k8sgpt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.15/k8sgpt_Darwin_arm64.tar.gz"
-      sha256 "b7f4fb25bf05457b43482af9ffa31c1104b1f078d41586110acc31932b63deb0"
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.16/k8sgpt_Darwin_arm64.tar.gz"
+      sha256 "c92320f28bb45e69ebd2a833864d1d3157b5198bf5e8812782ad4de132d50842"
 
       def install
         bin.install "k8sgpt"
@@ -27,24 +27,18 @@ class K8sgpt < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.15/k8sgpt_Linux_x86_64.tar.gz"
-        sha256 "37b0f25ea5ad3fdeac73195fe539ec8b47affe1cf6c101b36d374cc5d14e2350"
-
-        def install
-          bin.install "k8sgpt"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.16/k8sgpt_Linux_x86_64.tar.gz"
+      sha256 "e6adae1c341aa1cd57f072f3368372e956ac227fda88a030362e956717a2164a"
+      def install
+        bin.install "k8sgpt"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.15/k8sgpt_Linux_arm64.tar.gz"
-        sha256 "6241a6ae87b0364bde4bfc5d8e79618381fc74e3da941b20485bccf02f623c9d"
-
-        def install
-          bin.install "k8sgpt"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.16/k8sgpt_Linux_arm64.tar.gz"
+      sha256 "ed09c24d2a8f8bacbd263524932e76a55f43a340db4d71aafcc60699ae67860d"
+      def install
+        bin.install "k8sgpt"
       end
     end
   end
