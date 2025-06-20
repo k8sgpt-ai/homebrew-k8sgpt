@@ -5,20 +5,20 @@
 class K8sgpt < Formula
   desc ""
   homepage "https://k8sgpt.ai"
-  version "0.4.18"
+  version "0.4.19"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.18/k8sgpt_Darwin_x86_64.tar.gz"
-      sha256 "cc7d346f0e0bce825c34c357c548542521754a4daa8050c10b2b5603997dde64"
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.19/k8sgpt_Darwin_x86_64.tar.gz"
+      sha256 "5a02a1ac1a2481c24e6b1276830d05d66594c0dfa1cb0fc56322a2da918dee8c"
 
       def install
         bin.install "k8sgpt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.18/k8sgpt_Darwin_arm64.tar.gz"
-      sha256 "9eb765c575e3ad8296663a9ea1496faa1191e51ac0fc91141999d54c68f38c7f"
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.19/k8sgpt_Darwin_arm64.tar.gz"
+      sha256 "7443d4c387345452e85ee0f45740ab095a65c6b32590e3b54453263ba6e522b0"
 
       def install
         bin.install "k8sgpt"
@@ -28,15 +28,15 @@ class K8sgpt < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.18/k8sgpt_Linux_x86_64.tar.gz"
-      sha256 "f6aeb1f8bdd58cfef526f18faaef9e2d4b0a8b3fe0bea1fad5c7052a6bb398fd"
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.19/k8sgpt_Linux_x86_64.tar.gz"
+      sha256 "48df0aaef9b84b2a97ac55818b0ebff6bee49c7e755a5346c41382a9101560de"
       def install
         bin.install "k8sgpt"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.18/k8sgpt_Linux_arm64.tar.gz"
-      sha256 "b5b6e4995f58fbb3c91230598d6a6c914607b3044caea5964a97cf0be3301a47"
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.19/k8sgpt_Linux_arm64.tar.gz"
+      sha256 "0a5f954b8600e93fc69bad4d19e59bb67344e5a01fe6789927cea133be4cf501"
       def install
         bin.install "k8sgpt"
       end
