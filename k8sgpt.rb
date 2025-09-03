@@ -5,20 +5,20 @@
 class K8sgpt < Formula
   desc ""
   homepage "https://k8sgpt.ai"
-  version "0.4.24"
+  version "0.4.25"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.24/k8sgpt_Darwin_x86_64.tar.gz"
-      sha256 "b6b8b35f4d3499a0ea9a0ddf9d534ae05c19fe414e221782fd19cec8ef58d7af"
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.25/k8sgpt_Darwin_x86_64.tar.gz"
+      sha256 "4423b066acb5b33407dbd4524724c1d3e76a090855cbdf4ee8b5b75aebd78399"
 
       def install
         bin.install "k8sgpt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.24/k8sgpt_Darwin_arm64.tar.gz"
-      sha256 "be3e5d5b6820406f550895e404d8db8242e44c357ce6edc455d2bb6d6b3cee19"
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.25/k8sgpt_Darwin_arm64.tar.gz"
+      sha256 "a41cdf99e0f122c57a9eeac4c0ed55f47f79f2af1bc22a23747b28890fd9a2c1"
 
       def install
         bin.install "k8sgpt"
@@ -27,16 +27,16 @@ class K8sgpt < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.24/k8sgpt_Linux_x86_64.tar.gz"
-      sha256 "10e919ae63bca5ccafaa69fa208e66c2a1c04bc8b456d8dc2cfdc9cde83aa5a2"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.25/k8sgpt_Linux_x86_64.tar.gz"
+      sha256 "8db8337537c2ae7eefbd6a0888913ca510e1e87d9cbbf33094d22e44152dddea"
       def install
         bin.install "k8sgpt"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.24/k8sgpt_Linux_arm64.tar.gz"
-      sha256 "97adcd85896e5f1a06b951f1a9d41f9e4fa5151e783c8f228c818ceafd297951"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.25/k8sgpt_Linux_arm64.tar.gz"
+      sha256 "8bf3b59ac7c6e0ec411098c28dcf3b156047e83f216e2e81b33461bde413957e"
       def install
         bin.install "k8sgpt"
       end
