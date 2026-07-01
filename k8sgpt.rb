@@ -5,20 +5,20 @@
 class K8sgpt < Formula
   desc ""
   homepage "https://k8sgpt.ai"
-  version "0.4.34"
+  version "0.4.35"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.34/k8sgpt_Darwin_x86_64.tar.gz"
-      sha256 "0dbb83b0c3b6371fc8f34ccef53debb898697ea0f9ec76c2a125d357e1f7b2bb"
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.35/k8sgpt_Darwin_x86_64.tar.gz"
+      sha256 "a7c3620e5d85e57142322c66d6de0ac6ecf2810fe7d71f3dddb4d0c2e8c35884"
 
       define_method(:install) do
         bin.install "k8sgpt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.34/k8sgpt_Darwin_arm64.tar.gz"
-      sha256 "dbd30557eff021d5b20fa72c53fb474e14694ed58c60f8d172e3b8a52539176c"
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.35/k8sgpt_Darwin_arm64.tar.gz"
+      sha256 "d051f88cb8acd11c7b55e74523cd6a9658a861ead05ede15ee2658fe628d226e"
 
       define_method(:install) do
         bin.install "k8sgpt"
@@ -28,15 +28,15 @@ class K8sgpt < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.34/k8sgpt_Linux_x86_64.tar.gz"
-      sha256 "7ef749cb807aeef1848699478511994d07885eddeaa2cb2350954649c28553fa"
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.35/k8sgpt_Linux_x86_64.tar.gz"
+      sha256 "5497af82a3a38d54449f287464f7a6993bef5daa301f0c30a3a3a4667a9353b6"
       define_method(:install) do
         bin.install "k8sgpt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.34/k8sgpt_Linux_arm64.tar.gz"
-      sha256 "f1b284eaff5e51331d2079f7bbd42322d239524827b3c68df355c8755a4b6051"
+      url "https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.4.35/k8sgpt_Linux_arm64.tar.gz"
+      sha256 "060c5cf667ec7d73e779f495ab7d8e6d0db0d092271a4cef6b0d5fe35b0a991a"
       define_method(:install) do
         bin.install "k8sgpt"
       end
